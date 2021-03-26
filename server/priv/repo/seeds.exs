@@ -13,6 +13,9 @@
 
 alias EventsApp.Repo
 alias EventsApp.Users.User
+alias EventsApp.Events.Event
 
 alice = Repo.insert!(%User{name: "alice", email: "alice@mail.com", password_hash: ""})
 bob = Repo.insert!(%User{name: "bob", email: "bob@mail.com", password_hash: ""})
+
+alice_post = Repo.insert!(%Event{name: "alices event", date: "03-26-2021", description: "alices bday partay", user_id: alice.id})

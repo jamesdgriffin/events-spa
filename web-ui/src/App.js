@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" exact>
-          <h1>Events Feed</h1>
+          <Feed />
         </Route>
         <Route path="/users">
           <Users />

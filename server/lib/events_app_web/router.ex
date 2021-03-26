@@ -1,6 +1,10 @@
 defmodule EventsAppWeb.Router do
   use EventsAppWeb, :router
 
+  scope "/", EventsAppWeb do
+    get "/", PageController, :index
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
